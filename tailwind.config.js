@@ -2,7 +2,7 @@ const withMT = require('@material-tailwind/react/utils/withMT');
 
 module.exports = withMT({
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
-    important: '#root',
+    // important: '#root',
     variants: {
         extend: {
             backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
@@ -12,9 +12,10 @@ module.exports = withMT({
         extend: {
             fontFamily: {
                 sans: ['One Dot'],
+                // serif: ['One Dot'],
             },
             colors: {
-                content: '#E5E5E5',
+                'main-content': '#E5E5E5',
                 'blue-primary': '#002034',
                 'blue-secondary': '#00587C',
                 'blue-accent': '#006491',
