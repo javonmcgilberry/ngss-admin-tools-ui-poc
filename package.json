@@ -25,6 +25,11 @@
         "typescript": "^4.7.3",
         "web-vitals": "^2.1.4"
     },
+    "babelMacros": {
+        "twin": {
+            "config": "tailwind.config.js"
+        }
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
