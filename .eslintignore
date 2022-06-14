@@ -14,3 +14,7 @@ coverage
 .prettier.config.js
 
 .babel.config.js
+
+tailwind.config.js
+
+./src/reportWebVitals.ts
