@@ -6,7 +6,7 @@ import usePageTitle from '../../hooks/usePageTitle';
 const Header = () => {
     const currentPage = usePageTitle();
     return (
-        <Typography variant="h4" tw="border hover:border-black text-blue-400">
+        <Typography variant="h2" tw="text-blue-title font-condensed font-normal">
             {currentPage}
         </Typography>
     );

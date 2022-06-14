@@ -4,7 +4,7 @@ import usePageTitle from '../hooks/usePageTitle';
 
 const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
     return (
-        <main className="h-screen flex-1 overflow-scroll bg-main-content">
+        <main className="h-screen flex-1 overflow-scroll bg-main-content px-6 py-10">
             <Header />
             {children}
         </main>

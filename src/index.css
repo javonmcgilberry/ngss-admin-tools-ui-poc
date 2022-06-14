@@ -252,3 +252,8 @@ code {
 .condensed {
     font-family: 'One Dot Cd';
 }
+
+ul li div:nth-child(2) {
+    background-color: #006491 !important;
+    border-radius: 20rem;
+}
