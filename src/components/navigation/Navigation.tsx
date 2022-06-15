@@ -12,7 +12,7 @@ const Navigation = ({ routes }: INavigation) => {
             {routes.map((route) => (
                 <NavLink key={route.path} style={{ textDecoration: 'none' }} to={route.path}>
                     <div
-                        className=" px-4 py-2 font-black transition-all hover:bg-blue-secondary"
+                        className=" hover:bg-blue-secondary px-4 py-2 font-black transition-all"
                         key={route.title}
                     >
                         <div>
