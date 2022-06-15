@@ -23,7 +23,7 @@ const TabSelections = () => {
     const [active, setActive] = useState(data[0].label);
 
     return (
-        <Tabs value="html" tw="w-full" style={{ borderRadius: `20rem` }}>
+        <Tabs value="html" tw="w-1/2" style={{ borderRadius: `20rem` }}>
             <TabsHeader
                 tw="p-0"
                 style={{
