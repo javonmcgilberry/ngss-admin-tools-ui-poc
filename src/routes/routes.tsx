@@ -1,6 +1,7 @@
 import CouponsPage from '../pages/Coupons';
 import DashboardPage from '../pages/Dashboard';
 import PricingPage from '../pages/Pricing';
+import ProductsPage from '../pages/Products';
 
 export interface RoutePathDefinition {
     title: string;
@@ -23,6 +24,7 @@ const routes: RoutePathDefinition[] = [
     {
         title: 'Products',
         path: '/products',
+        element: () => <ProductsPage />,
     },
     {
         title: 'Pricing',

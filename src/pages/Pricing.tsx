@@ -1,5 +1,5 @@
 const PricingPage = () => {
-    return <>TESTING!!</>;
+    return <>We are on the pricing page!!</>;
 };
 
 export default PricingPage;
