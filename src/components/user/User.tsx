@@ -1,4 +1,4 @@
-import { Typography } from '@material-tailwind/react';
+import { Typography } from '@mui/material';
 
 const User = () => {
     return (
@@ -6,7 +6,7 @@ const User = () => {
             <Typography variant="h4" color="white">
                 J. Johnson
             </Typography>
-            <Typography variant="paragraph" color="white" className="font-bold">
+            <Typography variant="subtitle1" color="white" className="font-bold">
                 SIGN OUT
             </Typography>
         </div>

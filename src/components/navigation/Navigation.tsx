@@ -1,4 +1,4 @@
-import { Typography } from '@material-tailwind/react';
+import { Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { RoutePathDefinition } from '../../routes/routes';
 
@@ -12,7 +12,7 @@ const Navigation = ({ routes }: INavigation) => {
             {routes.map((route) => (
                 <NavLink key={route.path} style={{ textDecoration: 'none' }} to={route.path}>
                     <div
-                        className=" hover:bg-blue-secondary px-4 py-2 font-black transition-all"
+                        className="px-4 py-2 font-black transition-all hover:bg-blue-secondary"
                         key={route.title}
                     >
                         <div>

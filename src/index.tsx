@@ -4,13 +4,19 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { StyledEngineProvider } from '@mui/system';
+import MuiThemeProvider from './MuiThemeProvider/MuiThemeProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <StyledEngineProvider injectFirst>
+            <BrowserRouter>
+                <MuiThemeProvider>
+                    <App />
+                </MuiThemeProvider>
+            </BrowserRouter>
+        </StyledEngineProvider>
     </React.StrictMode>
 );
 

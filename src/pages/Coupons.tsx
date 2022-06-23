@@ -6,10 +6,12 @@ import Dropdown from '../dropdown/Dropdown';
 import InputBox from '../input/Input';
 
 import tw from 'twin.macro';
-import { Checkbox } from '@material-tailwind/react';
 import AccordionComponent from '../components/accordion/Accordion';
+import { Checkbox } from '@mui/material';
 
 const Label = tw.h3`font-condensed`;
+
+const StyledCheckbox = tw(Checkbox)``;
 
 const LabelBold = tw(Label)`font-bold`;
 
@@ -23,36 +25,36 @@ const CouponsPage = () => {
                         label="Coupon Offering Type"
                         selectedVal={{
                             value: 'test',
-                            label: 'Test 1',
+                            label: 'Test 1'
                         }}
                         setSelectedVal={() => {}}
                         options={[
                             {
                                 value: 'test',
-                                label: 'Test 1',
+                                label: 'Test 1'
                             },
                             {
                                 value: 'test',
-                                label: 'Test 2',
-                            },
+                                label: 'Test 2'
+                            }
                         ]}
                     ></Dropdown>
                     <Dropdown
                         label="Discount Pricing Options"
                         selectedVal={{
                             value: 'test',
-                            label: 'Fixed Price Initial',
+                            label: 'Fixed Price Initial'
                         }}
                         setSelectedVal={() => {}}
                         options={[
                             {
                                 value: 'test',
-                                label: 'Fixed Price Initial',
+                                label: 'Fixed Price Initial'
                             },
                             {
                                 value: 'test',
-                                label: 'Fixed Price Initial 2',
-                            },
+                                label: 'Fixed Price Initial 2'
+                            }
                         ]}
                     ></Dropdown>
                 </div>
@@ -75,11 +77,11 @@ const CouponsPage = () => {
                     <LabelBold>SETTINGS FOR COMPONENT #1</LabelBold>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-4">
-                            <Checkbox tw="w-8 h-8" />
+                            <StyledCheckbox tw="w-8 h-8" />
                             <Label>Ignore Surcharges</Label>
                         </div>
                         <div className="flex items-center gap-4">
-                            <Checkbox tw="w-8 h-8" />
+                            <StyledCheckbox tw="w-8 h-8" />
                             <Label>Allow Floating Ingredients</Label>
                         </div>
                     </div>

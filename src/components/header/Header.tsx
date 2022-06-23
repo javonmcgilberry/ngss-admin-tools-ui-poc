@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Typography } from '@material-tailwind/react';
+import { Typography } from '@mui/material';
 import 'twin.macro';
 import usePageTitle from '../../hooks/usePageTitle';
 

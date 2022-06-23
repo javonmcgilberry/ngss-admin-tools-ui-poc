@@ -1,4 +1,4 @@
-import { Input, Option, Select } from '@material-tailwind/react';
+import { Input } from '@mui/material';
 import { SetStateAction } from 'react';
 /** @jsxImportSource @emotion/react */
 
@@ -16,8 +16,6 @@ const InputBox = ({ label, value }: InputProps) => {
         <div className="max-w-1/2 flex w-1/2 flex-col gap-4">
             <InputLabel>{label}</InputLabel>
             <Input
-                variant="outlined"
-                size="lg"
                 tw="bg-white text-lg text-black"
                 // value={value}
                 // onChange={() => {}}

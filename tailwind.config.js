@@ -1,17 +1,15 @@
-const withMT = require('@material-tailwind/react/utils/withMT');
-
-module.exports = withMT({
+module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     variants: {
         extend: {
-            backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
-        },
+            backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled']
+        }
     },
     theme: {
         extend: {
             fontFamily: {
                 condensed: ['One Dot Cd'],
-                sans: ['One Dot'],
+                sans: ['One Dot']
                 // serif: ['One Dot'],
             },
             colors: {
@@ -20,8 +18,8 @@ module.exports = withMT({
                 'blue-title': '#202123',
                 'blue-secondary': '#00587C',
                 'blue-accent': '#006491',
-                disabled: '#B5B5B5',
-            },
+                disabled: '#B5B5B5'
+            }
         },
         fluidType: {
             // your fluid type settings
@@ -35,7 +33,7 @@ module.exports = withMT({
                 screenMin: 20, // 20rem === 320px
                 screenMax: 96, // 96rem === 1536px
                 unit: 'rem', // default is rem but it's also possible to use 'px'
-                prefix: '', // set a prefix to use it alongside the default font sizes
+                prefix: '' // set a prefix to use it alongside the default font sizes
             },
             // Creates the text-xx classes
             // This are the default settings and analog to the tailwindcss defaults
@@ -53,15 +51,15 @@ module.exports = withMT({
                 '6xl': [7, 1.1],
                 '7xl': [8, 1],
                 '8xl': [9, 1],
-                '9xl': [10, 1],
-            },
-        },
+                '9xl': [10, 1]
+            }
+        }
     },
     // You can disable the fontSize core plugin if you don't need the defaults.
     // If you don't disable it, the fluid-type plugin simply overrule the defaults.
     // Or you can use both alongside when you set an prefix in the settings
     corePlugins: {
-        fontSize: false,
-    },
-    // plugins: [require('tailwindcss-fluid-type')],
-});
+        fontSize: false
+    }
+    // plugins: [require('tailwindcss-fluid-type')]
+};

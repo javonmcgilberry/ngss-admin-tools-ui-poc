@@ -1,27 +1,26 @@
-import { Option, Select } from '@material-tailwind/react';
+import { MenuItem, Select } from '@mui/material';
 import { SetStateAction } from 'react';
 import { MarketOption } from '../sidebar/Sidebar';
-
+import tw from 'twin.macro';
 type MarketSelectorProps = {
     selectedVal: MarketOption;
     setSelectedVal: React.Dispatch<SetStateAction<MarketOption>>;
     marketOptions: MarketOption[];
 };
 
+const MarketSelectorWrapper = tw.div`flex w-full flex-col gap-4`;
+const StyledSelect = tw(Select)`bg-white text-black`;
+
 const MarketSelector = ({ selectedVal, setSelectedVal, marketOptions }: MarketSelectorProps) => {
     return (
-        <div className="flex w-full items-end gap-4">
-            <Select
-                variant="outlined"
-                value="U.S. Market"
-                size="lg"
-                className="bg-white text-lg text-black"
+        <MarketSelectorWrapper>
+            <StyledSelect
+                defaultValue={selectedVal.value}
                 onChange={(val) => console.log('VALUE', val)}
-                selected={() => <>{selectedVal.label}</>}
             >
                 {marketOptions.map((option) => {
                     return (
-                        <Option
+                        <MenuItem
                             onChange={() => {
                                 // const value = val as unknown as string;
                                 setSelectedVal(option);
@@ -30,11 +29,11 @@ const MarketSelector = ({ selectedVal, setSelectedVal, marketOptions }: MarketSe
                             value={option.value}
                         >
                             {option.label}
-                        </Option>
+                        </MenuItem>
                     );
                 })}
-            </Select>
-        </div>
+            </StyledSelect>
+        </MarketSelectorWrapper>
     );
 };
 

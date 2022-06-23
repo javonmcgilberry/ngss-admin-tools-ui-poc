@@ -1,8 +1,10 @@
+/** @jsxImportSource @emotion/react */
 import { useEffect, useState } from 'react';
 import routes from '../../routes/routes';
 import MarketSelector from '../marketSelector/MarketSelector';
 import Navigation from '../navigation/Navigation';
 import User from '../user/User';
+import tw from 'twin.macro';
 
 export type MarketOption = {
     value: string;
@@ -11,8 +13,10 @@ export type MarketOption = {
 
 const MARKET_OPTIONS = [
     { value: 'us', label: 'U.S. Market' },
-    { value: 'us1', label: 'Test Market 1' },
+    { value: 'us1', label: 'Test Market 1' }
 ];
+
+const SidebarContainer = tw.aside`h-screen w-1/5 min-w-[350px] gap-2 overflow-scroll bg-blue-primary py-6`;
 
 const Sidebar = () => {
     const [selectedVal, setSelectedVal] = useState<MarketOption>({ value: '', label: '' });
@@ -21,7 +25,7 @@ const Sidebar = () => {
         setSelectedVal(MARKET_OPTIONS[0]);
     }, []);
     return (
-        <aside className="h-screen w-1/5 min-w-[350px] gap-2 overflow-scroll bg-blue-primary py-6">
+        <SidebarContainer>
             <div className="flex flex-col gap-4 px-4">
                 <User />
                 <MarketSelector
@@ -31,7 +35,7 @@ const Sidebar = () => {
                 />
             </div>
             <Navigation routes={routes} />
-        </aside>
+        </SidebarContainer>
     );
 };
 

@@ -1,4 +1,4 @@
-import { Button } from '@material-tailwind/react';
+import Button from '@mui/material/Button';
 
 const ProductsPage = () => {
     return <Button>Click me!!</Button>;

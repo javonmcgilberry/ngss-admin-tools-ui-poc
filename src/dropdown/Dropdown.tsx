@@ -1,4 +1,4 @@
-import { Option, Select } from '@material-tailwind/react';
+import { MenuItem, Select } from '@mui/material';
 import { SetStateAction } from 'react';
 /** @jsxImportSource @emotion/react */
 
@@ -24,14 +24,13 @@ const Dropdown = ({ label, options, selectedVal, setSelectedVal }: DropdownProps
             <DropdownLabel>{label}</DropdownLabel>
             <Select
                 variant="outlined"
-                size="lg"
                 tw="bg-white text-lg text-black"
                 onChange={(val) => console.log('VALUE', val)}
-                selected={() => <>{selectedVal.label}</>}
+                // selected={() => <>{selectedVal.label}</>}
             >
                 {options.map((option) => {
                     return (
-                        <Option
+                        <MenuItem
                             onChange={() => {
                                 // const value = val as unknown as string;
                                 setSelectedVal(option);
@@ -40,7 +39,7 @@ const Dropdown = ({ label, options, selectedVal, setSelectedVal }: DropdownProps
                             value={option.value}
                         >
                             {option.label}
-                        </Option>
+                        </MenuItem>
                     );
                 })}
             </Select>
