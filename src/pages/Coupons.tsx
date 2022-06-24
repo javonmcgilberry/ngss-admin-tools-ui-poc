@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { SetStateAction } from 'react';
+import { SetStateAction, useState } from 'react';
 import { PageSection, Title } from '../components/common';
 import TabSelections from '../components/tabSelection/TabSelections';
 import Dropdown from '../dropdown/Dropdown';
@@ -15,77 +15,83 @@ const StyledCheckbox = tw(Checkbox)``;
 
 const LabelBold = tw(Label)`font-bold`;
 
+const Row = tw.div`flex`;
+const ColumnFullWidth = tw.div`w-full gap-4 flex flex-col px-2`;
+const Column = tw(ColumnFullWidth)`max-w-[50%]`;
+
 const CouponsPage = () => {
+    const [couponOfferingType, setCouponOfferingType] = useState('');
+    const [discountPricingOption, setDiscountPricing] = useState('');
     return (
         <div className="flex w-full flex-col gap-4 py-8">
             <TabSelections />
             <PageSection title="Pricing Options">
-                <div className="flex gap-4">
-                    <Dropdown
-                        label="Coupon Offering Type"
-                        selectedVal={{
-                            value: 'test',
-                            label: 'Test 1'
-                        }}
-                        setSelectedVal={() => {}}
-                        options={[
-                            {
-                                value: 'test',
-                                label: 'Test 1'
-                            },
-                            {
-                                value: 'test',
-                                label: 'Test 2'
-                            }
-                        ]}
-                    ></Dropdown>
-                    <Dropdown
-                        label="Discount Pricing Options"
-                        selectedVal={{
-                            value: 'test',
-                            label: 'Fixed Price Initial'
-                        }}
-                        setSelectedVal={() => {}}
-                        options={[
-                            {
-                                value: 'test',
-                                label: 'Fixed Price Initial'
-                            },
-                            {
-                                value: 'test',
-                                label: 'Fixed Price Initial 2'
-                            }
-                        ]}
-                    ></Dropdown>
-                </div>
+                <Row>
+                    <Column>
+                        <Dropdown
+                            label="Coupon Offering Type"
+                            selectedOption={couponOfferingType}
+                            setSelectedOption={setCouponOfferingType}
+                            options={[
+                                {
+                                    value: 'test',
+                                    label: 'Test 1'
+                                },
+                                {
+                                    value: 'test',
+                                    label: 'Test 2'
+                                }
+                            ]}
+                        ></Dropdown>
+                    </Column>
+                    <Column>
+                        <Dropdown
+                            label="Discount Pricing Options"
+                            selectedOption={discountPricingOption}
+                            setSelectedOption={setDiscountPricing}
+                            options={[
+                                {
+                                    value: 'test',
+                                    label: 'Fixed Price Initial'
+                                },
+                                {
+                                    value: 'test',
+                                    label: 'Fixed Price Initial 2'
+                                }
+                            ]}
+                        ></Dropdown>
+                    </Column>
+                </Row>
             </PageSection>
             <PageSection title="Component #1">
-                <div className="flex flex-col gap-4">
-                    <LabelBold>QUALIFYING AMOUNT FOR COMPONENT #1</LabelBold>
-                    <div className="flex gap-4">
+                <LabelBold>QUALIFYING AMOUNT FOR COMPONENT #1</LabelBold>
+                <Row>
+                    <Column>
                         <InputBox label={'Minimum Required'} value={''} />
-                    </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <LabelBold>DISCOUNT BENEFIT FOR COMPONENT #1</LabelBold>
-                    <div className="flex gap-4">
+                    </Column>
+                </Row>
+                <LabelBold>DISCOUNT BENEFIT FOR COMPONENT #1</LabelBold>
+                <Row>
+                    <Column>
                         <InputBox label={'Fixed Price Initial'} value={''} />
+                    </Column>
+                    <Column>
                         <InputBox label={'Maximum Allowed (Enter "0" for no Maximum)'} value={''} />
-                    </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <LabelBold>SETTINGS FOR COMPONENT #1</LabelBold>
+                    </Column>
+                </Row>
+
+                <LabelBold>SETTINGS FOR COMPONENT #1</LabelBold>
+                <Row tw="gap-4">
                     <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-4">
-                            <StyledCheckbox tw="w-8 h-8" />
-                            <Label>Ignore Surcharges</Label>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <StyledCheckbox tw="w-8 h-8" />
-                            <Label>Allow Floating Ingredients</Label>
-                        </div>
+                        <StyledCheckbox tw="w-8 h-8" />
+                        <Label>Ignore Surcharges</Label>
                     </div>
-                </div>
+                    <div className="flex items-center gap-4">
+                        <StyledCheckbox tw="w-8 h-8" />
+                        <Label>Allow Floating Ingredients</Label>
+                    </div>
+                </Row>
+
                 <div className="flex flex-col gap-4">
                     <LabelBold>PRODUCTS INCLUDED IN COMPONENT #1</LabelBold>
                     <div className="flex flex-col items-center gap-4">

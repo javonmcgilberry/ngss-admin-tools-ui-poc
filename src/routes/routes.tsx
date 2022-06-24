@@ -15,75 +15,75 @@ const routes: RoutePathDefinition[] = [
     {
         title: 'Dashboard',
         path: '/dashboard',
-        element: () => <DashboardPage />,
+        element: () => <DashboardPage />
     },
     {
         title: 'Store Ops',
-        path: '/store-ops',
+        path: '/store-ops'
     },
     {
         title: 'Products',
         path: '/products',
-        element: () => <ProductsPage />,
+        element: () => <ProductsPage />
     },
     {
         title: 'Pricing',
         path: '/pricing',
-        element: () => <PricingPage />,
+        element: () => <PricingPage />
     },
     {
         title: 'Menu',
-        path: '/menu',
+        path: '/menu'
     },
     {
         title: 'Inventory',
-        path: '/inventory',
+        path: '/inventory'
     },
     {
         title: 'Vendor Inventory',
-        path: '/vendor-inventory',
+        path: '/vendor-inventory'
     },
     {
         title: 'Coupons',
         path: '/coupons',
-        element: () => <CouponsPage />,
+        element: () => <CouponsPage />
     },
     {
         title: 'Makeline',
-        path: '/makeline',
+        path: '/makeline'
     },
     {
         title: 'LDA',
-        path: '/lda',
+        path: '/lda'
     },
     {
         title: 'Device',
-        path: '/device',
+        path: '/device'
     },
     {
         title: 'Workforce',
-        path: '/workforce',
+        path: '/workforce'
     },
     {
         title: 'Customer',
-        path: '/customer',
+        path: '/customer'
     },
     {
         title: 'Finance',
-        path: '/finance',
+        path: '/finance'
     },
     {
         title: 'Trade Receivables',
-        path: '/trace-receivables',
+        path: '/trace-receivables'
     },
     {
         title: 'Reports',
-        path: '/reports',
+        path: '/reports'
     },
     {
         title: 'Change Sets',
-        path: '/change-sets',
-    },
+        path: '/change-sets'
+    }
 ];
 
 export default routes;

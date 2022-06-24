@@ -60,6 +60,6 @@ module.exports = {
     // Or you can use both alongside when you set an prefix in the settings
     corePlugins: {
         fontSize: false
-    }
-    // plugins: [require('tailwindcss-fluid-type')]
+    },
+    plugins: [require('tailwindcss-fluid-type')]
 };
