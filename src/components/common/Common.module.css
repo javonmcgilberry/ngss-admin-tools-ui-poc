@@ -1,0 +1,22 @@
+.row {
+    display: flex;
+}
+
+.column_full {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem /** 8px */;
+    padding-right: 0.5rem /** 8px */;
+}
+
+.column {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem /** 8px */;
+    padding-right: 0.5rem /** 8px */;
+    max-width: 50%;
+}
