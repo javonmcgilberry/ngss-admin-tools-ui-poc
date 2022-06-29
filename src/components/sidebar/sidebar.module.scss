@@ -9,3 +9,11 @@
     padding-top: 1.5rem /** 24px */;
     padding-bottom: 1.5rem /** 24px */;
 }
+
+.user_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+}

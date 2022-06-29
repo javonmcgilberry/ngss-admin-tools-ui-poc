@@ -1,3 +1,8 @@
+import { useState } from 'react';
+import routes from '../../routes/routes';
+import MarketSelector from '../marketSelector/MarketSelector';
+import Navigation from '../navigation/Navigation';
+import User from '../user/User';
 import styles from './sidebar.module.scss';
 
 export type MarketOption = {
@@ -5,8 +10,27 @@ export type MarketOption = {
     label: string;
 };
 
+const MARKET_OPTIONS = [
+    { value: 'us', label: 'U.S. Market' },
+    { value: 'us1', label: 'Test Market 1' }
+];
+
 const Sidebar = () => {
-    return <div className={styles.sidebar_container}>Hello!</div>;
+    const [selectedVal, setSelectedVal] = useState<MarketOption>({ value: '', label: '' });
+
+    return (
+        <div className={styles.sidebar_container}>
+            <div className={styles.user_panel}>
+                <User />
+                <MarketSelector
+                    marketOptions={MARKET_OPTIONS}
+                    selectedVal={selectedVal}
+                    setSelectedVal={setSelectedVal}
+                />
+            </div>
+            <Navigation routes={routes} />
+        </div>
+    );
 };
 
 export default Sidebar;
