@@ -1,3 +1,5 @@
+@use './theme/colors.module.scss' as colors;
+
 @font-face {
     font-family: 'One Dot';
     src: url('fonts/OneDot-BoldItalic.woff2') format('woff2'),
