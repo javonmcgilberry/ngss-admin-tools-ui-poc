@@ -66,5 +66,15 @@
         "react/jsx-one-expression-per-line": [0],
         "react/prefer-stateless-function": [1],
         "react/static-property-placement": [1, "property assignment"]
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "project": "tsconfig.json"
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
-$primary-color: green;
+@use '../../theme/colors.module.scss' as colors;
 
 .test {
-    color: $primary-color;
+    color: colors.$blue-accent;
 }
