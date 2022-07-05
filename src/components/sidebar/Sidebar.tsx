@@ -19,7 +19,7 @@ const Sidebar = () => {
     const [selectedVal, setSelectedVal] = useState<MarketOption>({ value: '', label: '' });
 
     return (
-        <div className={styles.sidebar_container}>
+        <aside className={styles.sidebar_container}>
             <div className={styles.user_panel}>
                 <User />
                 <MarketSelector
@@ -29,7 +29,7 @@ const Sidebar = () => {
                 />
             </div>
             <Navigation routes={routes} />
-        </div>
+        </aside>
     );
 };
 
