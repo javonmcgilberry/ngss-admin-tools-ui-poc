@@ -81,7 +81,7 @@ const CouponsPage = () => {
                 </Row>
 
                 <LabelBold>SETTINGS FOR COMPONENT #1</LabelBold>
-                <Row tw="gap-4">
+                <Row>
                     <div className="flex items-center gap-4">
                         <StyledCheckbox tw="w-8 h-8" />
                         <Label>Ignore Surcharges</Label>
